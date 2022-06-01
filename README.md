@@ -12,5 +12,5 @@ I was tasked with creating a daily planner to create a schedule. When the app is
 ![Scheduler](/Work%20Day%20Scheduler.png)
 
 ## Resources
--[Live Site]()
--[Repository]()
+- [Live Site](https://n3330.github.io/my-calendar-app/)
+- [Repository](https://github.com/N3330/my-calendar-app)
