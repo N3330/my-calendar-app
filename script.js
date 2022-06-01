@@ -29,6 +29,6 @@ for (var i = 9; i < 18; i++) {  // create for loop starting from 9 to 18 for the
         localStorage.setItem(hourKey, activity); // set both activity and hourkey to localStorage
     })
     $(".table").append(tr.append(hourCell, eventCell.append(textArea), buttonCell.append(button))); // append each table row with its children which will happen as many times as i tells it to
-    //$("#currentday").append.text(todaysDate);
+    
 }
 
