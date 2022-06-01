@@ -18,17 +18,17 @@ for (var i = 9; i < 18; i++) {  // create for loop starting from 9 to 18 for the
     } else {
         hourDisplay = i-12 + "PM"
     }
-    var tr = $('<tr>').attr('id', i);
-    var hourCell = $('<td>').text(hourDisplay);
-    var eventCell = $('<td>').addClass('events-cell ' + colorKey);
-    var textArea = $('<textarea>').addClass('description').val(localStorage.getItem(i));
-    var buttonCell = $('<td>')
-    var button = $('<button>').text("save").addClass('btn save-btn').on("click", function () {
-        var activity = $(this).parent().siblings('.events-cell').children().val().trim();
-        var hourKey = $(this).parent().parent().attr("id");
-        localStorage.setItem(hourKey, activity);
+    var tr = $('<tr>').attr('id', i); // create table row at tr using i as an attribute to work with the index 9-18
+    var hourCell = $('<td>').text(hourDisplay); // create hour cell as tabble data 
+    var eventCell = $('<td>').addClass('events-cell ' + colorKey); // create event cell as table data and add event-cell class + colorKey past, present or future
+    var textArea = $('<textarea>').addClass('description').val(localStorage.getItem(i)); // create text area and add class description plus localStoreage using index to save each 9-18
+    var buttonCell = $('<td>') // create button cell 
+    var button = $('<button>').text("save").addClass('btn save-btn').on("click", function () { // create button inside sell using on click event function
+        var activity = $(this).parent().siblings('.events-cell').children().val().trim(); // store the value inside .events-cell as activity
+        var hourKey = $(this).parent().parent().attr("id");// store the value inside tr which is the hour
+        localStorage.setItem(hourKey, activity); // set both activity and hourkey to localStorage
     })
-    $(".table").append(tr.append(hourCell, eventCell.append(textArea), buttonCell.append(button)));
+    $(".table").append(tr.append(hourCell, eventCell.append(textArea), buttonCell.append(button))); // append each table row with its children which will happen as many times as i tells it to
     //$("#currentday").append.text(todaysDate);
 }
 
