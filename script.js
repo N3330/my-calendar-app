@@ -1,17 +1,17 @@
 //var rootEl = $('root');
-$("#currentDay").text(moment().format("dddd, MMM Do"));
-var todaysDate = moment().format('MMM d, YYYY');
-for (var i = 9; i < 18; i++) {
-    var colorKey = "";
-    if (i < moment().hours()) {
+$("#currentDay").text(moment().format("dddd, MMM Do")); // add date to top of page with currentDay id
+var todaysDate = moment().format('MMM d, YYYY');// use moment() and formatted date 
+for (var i = 9; i < 18; i++) {  // create for loop starting from 9 to 18 for the hours in my daily planner
+    var colorKey = ""; // blank string for color key
+    if (i < moment().hours()) { // color each eventCell if the hour is less than current hour for past
         colorKey = "past"
-    } else if (i === moment().hours()) {
+    } else if (i === moment().hours()) { // color eventCell for present if momment is current hour
         colorKey = "present"
     } else {
-        colorKey = "future"
+        colorKey = "future" // color eventCell for future
     }
-    var hourDisplay = "";
-    if (i < 12) {
+    var hourDisplay = ""; // blank string for hour display
+    if (i < 12) { // check if hour display is AM or PM
         hourDisplay = i+"AM"
     } else if (i === 12) {
         hourDisplay = i+"PM"
