@@ -1,4 +1,4 @@
-var rootEl = $('root');
+//var rootEl = $('root');
 $("#currentDay").text(moment().format("dddd, MMM Do"));
 var todaysDate = moment().format('MMM d, YYYY');
 for (var i = 9; i < 18; i++) {
